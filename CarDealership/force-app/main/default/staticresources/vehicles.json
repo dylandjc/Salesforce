@@ -1,0 +1,84 @@
+{
+    "vehicles": [
+        {
+            "name": "Mustang",
+            "type": "Car"
+        },
+        {
+            "name": "Explorer",
+            "type": "SUV"
+        },
+        {
+            "name": "F-150",
+            "type": "Truck"
+        },
+        {
+            "name": "Trailblazer",
+            "type": "SUV"
+        },
+        {
+            "name": "Camaro",
+            "type": "Car"
+        },
+        {
+            "name": "Grand Cherokee",
+            "type": "SUV"
+        },
+        {
+            "name": "Wrangler",
+            "type": "SUV"
+        },
+        {
+            "name": "XT4",
+            "type": "SUV"
+        },        
+        {
+            "name": "CTS",
+            "type": "Car"
+        },
+        {
+            "name": "CT5",
+            "type": "Car"
+        },
+        {
+            "name": "Navigator",
+            "type": "SUV"
+        },
+        {
+            "name": "Range Rover",
+            "type": "SUV"
+        },
+        {
+            "name": "Range Rover Sport",
+            "type": "SUV"
+        },
+        {
+            "name": "911",
+            "type": "Car"
+        },
+        {
+            "name": "Cooper",
+            "type": "Car"
+        },
+        {
+            "name": "Cooper S",
+            "type": "Car"
+        },
+        {
+            "name": "Corolla",
+            "type": "Car"
+        },
+        {
+            "name": "Camry",
+            "type": "Car"
+        },
+        {
+            "name": "Pilot",
+            "type": "SUV"
+        },
+        {
+            "name": "CR-V",
+            "type": "SUV"
+        }                                                
+    ]
+}
