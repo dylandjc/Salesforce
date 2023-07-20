@@ -1,0 +1,51 @@
+<template>
+    <div if:true={dataLoaded}>
+        <lightning-card title="Vehicle Details" icon-name="utility:travel_and_places">
+            <h2><a href="">{vehicle.Vehicle_Full_Name__c}</a></h2>
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-2 slds-p-left_medium">
+                            <p><b>Year:</b> {vehicle.Year__c}</p>
+                            <p><b>Color:</b> {vehicle.Color__c}</p>     
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <p if:true={vehicle.Populated_From_Api__c}><b>Transmission: </b> {vehicle.Transmission__c}</p>
+                    <p if:false={vehicle.Populated_From_Api__c}><b>Transmission: </b>N/A</p>
+                    <p><b>Price: </b><lightning-formatted-number value={vehicle.Price__c} format-style="currency" currency-code="USD"></lightning-formatted-number></p>
+                </div>
+            </div>
+            
+            <h2><b>Similar Vehicles</b></h2>
+            <h2><a href="">{similarVehicle1.Vehicle_Full_Name__c}</a></h2>
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-2 slds-p-left_medium">
+                            <p><b>Year:</b> {similarVehicle1.Year__c}</p>
+                            <p><b>Color:</b> {similarVehicle1.Color__c}</p>     
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <p if:true={similarVehicle1.Populated_From_Api__c}><b>Transmission: </b> {similarVehicle1.Transmission__c}</p>
+                    <p if:false={similarVehicle1.Populated_From_Api__c}><b>Transmission: </b>N/A</p>
+                    <p><b>Price: </b><lightning-formatted-number value={similarVehicle1.Price__c} format-style="currency" currency-code="USD"></lightning-formatted-number></p>
+                </div>
+            </div>
+            <h2><a href="">{similarVehicle2.Vehicle_Full_Name__c}</a></h2>
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-2 slds-p-left_medium">
+                            <p><b>Year:</b> {similarVehicle2.Year__c}</p>
+                            <p><b>Color:</b> {similarVehicle2.Color__c}</p>     
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <p if:true={similarVehicle2.Populated_From_Api__c}><b>Transmission: </b> {similarVehicle2.Transmission__c}</p>
+                    <p if:false={similarVehicle2.Populated_From_Api__c}><b>Transmission: </b>N/A</p>
+                    <p><b>Price: </b><lightning-formatted-number value={similarVehicle2.Price__c} format-style="currency" currency-code="USD"></lightning-formatted-number></p>
+                </div>
+            </div>
+        </lightning-card>
+    </div>
+    <div if:false={dataLoaded}>
+        <div role="status" class="slds-spinner slds-spinner_medium">
+            <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+        </div>
+    </div>
+</template>
