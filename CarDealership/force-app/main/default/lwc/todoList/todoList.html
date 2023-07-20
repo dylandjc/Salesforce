@@ -1,0 +1,12 @@
+<template>
+    <template for:each={myTasks} for:item="thisTask">
+        <c-todo-item 
+            key={thisTask.id} 
+            id={thisTask.id}
+            name={thisTask.name} 
+            status={thisTask.status} 
+            is-finished={thisTask.isFinished}
+            oncompletetask={removeTask}>
+        </c-todo-item>
+    </template>
+</template>
