@@ -1,0 +1,25 @@
+// Most basic query
+SELECT Name FROM Account
+
+// Limit the number of records returned
+SELECT Id, Name FROM Account LIMIT 15
+
+// Get the first 15 records alphabetically
+SELECT Id, Name FROM Account ORDER BY Name LIMIT 15
+
+// Filter by text field value
+SELECT Id, ProfileId FROM User WHERE Name = 'Dan Thoreson'
+SELECT Id, Name FROM Account WHERE Name = 'OceanView Dining Hall'
+
+// Retrieve related values
+SELECT Profile.Name FROM User WHERE Name = 'Dan Thoreson'
+SELECT Account.Type, Account.AnnualRevenue FROM Contact WHERE Email = 'test@testing.com'
+
+// Filter by numeric value
+SELECT Id, Name FROM Account WHERE AnnualRevenue > 3000000
+
+// Relative date example
+SELECT Id, Name FROM Account WHERE CreatedDate = THIS_WEEK
+
+// Multiple conditions
+SELECT Id, Name FROM Account WHERE Type = 'Manufacturing' AND (LastModifiedDate = THIS_YEAR OR OwnerId = '0052L000003ekO9QAI')
