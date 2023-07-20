@@ -1,0 +1,18 @@
+.left-align {
+    text-align: left;
+    float: left;
+    
+}
+.right-align {
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    font-weight: normal;
+}
+
+.slds-card__header-title_dc{
+    padding-top: 20px; 
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}

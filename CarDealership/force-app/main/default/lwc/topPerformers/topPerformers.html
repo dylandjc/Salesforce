@@ -1,0 +1,108 @@
+<template>
+    <div>
+        <lightning-card>
+            <div class="slds-card__header slds-grid slds-p-top_none">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="utility:graph" size="small" alternative-text="Top Performers" title="Top Performers"></lightning-icon>
+                        
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <lightning-layout-item size ="4" class="left-align">
+                                <span>Top Performers</span>
+                            </lightning-layout-item>
+                        </h2>
+                    </div>
+                    
+                    <lightning-layout-item size="2" class="right-align">
+                        <lightning-combobox name="progress" value={comboBoxValue} placeholder="Select Filter" dropdown-alignment="auto" options={options} onchange={handleChange} style="color:grey;width:150px"></lightning-combobox>
+                    </lightning-layout-item>
+                    
+                    
+                </header>
+            </div>
+
+            <div class="slds-card__body slds-card__body_inner">
+                <h3 class="slds-card__header-title_dc"><b>Top Number of Sales</b></h3>
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Current Category">{comboBoxValue}</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="# Sold"># Sold</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="slds-hint-parent">
+                        <td data-label="Current Category">
+                            <div class="slds-truncate" title="Porsche">{first}</div>
+                        </td>
+                        <td data-label="# Sold">
+                            <div class="slds-truncate" title="# Sold">{firstVal}</div>
+                        </td>
+                        </tr>
+                        <tr class="slds-hint-parent">
+                            <td data-label="Current Category">
+                                <div class="slds-truncate" title="Porsche">{second}</div>
+                            </td>
+                            <td data-label="# Sold">
+                                <div class="slds-truncate" title="# Sold">{secondVal}</div>
+                            </td>
+                        </tr>
+                        <tr class="slds-hint-parent">
+                            <td data-label="Current Category">
+                                <div class="slds-truncate" title="Porsche">{third}</div>
+                            </td>
+                            <td data-label="# Sold">
+                                <div class="slds-truncate" title="# Sold">{thirdVal}</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="slds-card__header-title_dc"><b>Profit Leaders</b></h3>
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Current Category">{comboBoxValue}</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Profits">Profit ($)</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="slds-hint-parent">
+                        <td data-label="Current Category">
+                            <div class="slds-truncate" title="Porsche">{fourth}</div>
+                        </td>
+                        <td data-label="# Sold">
+                            <div class="slds-truncate" title="Profits"><lightning-formatted-number value={fourthVal} format-style="currency" currency-code="USD"></lightning-formatted-number></div>
+                        </td>
+                        </tr>
+                        <tr class="slds-hint-parent">
+                            <td data-label="Current Category">
+                                <div class="slds-truncate" title="Porsche">{fifth}</div>
+                            </td>
+                            <td data-label="# Sold">
+                                <div class="slds-truncate" title="Profits"><lightning-formatted-number value={fifthVal} format-style="currency" currency-code="USD"></lightning-formatted-number></div>
+                            </td>
+                        </tr>
+                        <tr class="slds-hint-parent">
+                            <td data-label="Current Category">
+                                <div class="slds-truncate" title="Porsche">{sixth}</div>
+                            </td>
+                            <td data-label="# Sold">
+                                <div class="slds-truncate" title="Profits"><lightning-formatted-number value={sixthVal} format-style="currency" currency-code="USD"></lightning-formatted-number></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </lightning-card>
+    </div>
+</template>
